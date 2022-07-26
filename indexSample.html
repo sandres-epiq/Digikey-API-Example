@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:rows="http://www.w3.org/1999/xhtml" xmlns:cols="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Title</title>
+</head>
+
+<label id = "packageLabel" data-valueid = "help"> Package: </label>
+<br>
+<select id="package" parameterId = 16 onchange = formatCookies("package")>
+    <option value = "0201" valueid="39078">0201</option>
+    <option value = "0402" valueid="391558">0402</option>
+</select>
+<br>
+<br>
+
+
+<label id = "voltageLabel"> Voltage Rating: </label>
+<br>
+<select id="voltage" parameterId = 14 onchange = formatCookies("voltage")>
+    <option value = "6.3 V" valueid="252155">6.3V</option>
+    <option value = "10 V" valueid="74515">10V</option>
+    <option value = "16 V" valueid="108742">16V</option>
+    <option value = "25 V" valueid="159247">25V</option>
+    <option value = "50 V" valueid="238738">50V</option>
+</select>
+<br>
+<br>
+
+<label id = "diLabel"> Temperature Coefficient: </label>
+<br>
+<select id="di" parameterId = 14 onchange = formatCookies("di")>
+    <option value = "NP0 / C0G" valueid = "324183">NP0 / C0G</option>
+    <option value = "X5R" valueid = "422407">X5R</option>
+    <option value = "X7R" valueid = "422415">X7R</option>
+</select>
+<br>
+<br>
+
+
+<label id = "infoLabel"> Information to get: </label>
+<br>
+<select id = "info">
+    <option value="DigiKeyPartNumber">Digi-Key Part Number</option>
+    <option value="DetailedDescription">Detailed Description</option>
+    <option value="Name">Name</option>
+    <option value="Value">Value</option>
+    <option value="ItemReport">Number of Available Options</option>
+</select>
+<br>
+<br>
+<br>
+
+<button id = "go", style="font-size: 15pt; height: 30px; width: 200px">Go!</button>
+<br><br>
+<label id = "outputLabel">Output: </label>
+<br>
+<textarea id = "output", rows= "40", cols= "50"; wrap = off style =  'overflow: scroll;' readonly></textarea>
+<br>
+<button id = "toggle", style="font-size: 15pt; height: 30px; width: 200px">Toggle Index</button>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    ord = Math.random();
+    ord = Date.now();
+    document.write('<script src = "appSample.js?' + ord + '"><' + '/script>'); //Cache busting for development
+</script>
+
+</html>
+
